@@ -14,3 +14,18 @@ jobs:
 
     - name: Lint
       run: clj-kondo --lint src test --config '{:output {:pattern "::{{level}} file={{filename}},line={{row}},col={{col}}::{{message}}"}}'
+
+  code-style:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install cljstyle
+      uses: 0918nobita/setup-cljstyle@v0.5.4
+      with:
+        cljstyle-version: "0.15.0"
+
+    - name: Fetch code
+      uses: actions/checkout@v2
+
+    - name: Check code formatting
+      run: cljstyle check
+
