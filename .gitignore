@@ -16,3 +16,5 @@
 /checkouts
 /classes
 /target
+
+.dir-locals.el
