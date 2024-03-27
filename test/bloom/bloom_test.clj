@@ -1,6 +1,8 @@
 (ns bloom.bloom-test
-  (:require [clojure.test :refer [deftest is testing]]
-            [bloom.bloom :as sut]))
+  (:require
+    [bloom.bloom :as sut]
+    [clojure.test :refer [deftest is testing]]))
+
 
 (deftest a-test
   (testing "FIXME, I fail."
