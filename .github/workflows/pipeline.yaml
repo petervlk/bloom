@@ -10,7 +10,8 @@ jobs:
       with:
         version: '2024.03.13'
 
-    - uses: actions/checkout@v2
+    - name: Fetch code
+      uses: actions/checkout@v2
 
     - name: Lint
       run: clj-kondo --lint src test --config '{:output {:pattern "::{{level}} file={{filename}},line={{row}},col={{col}}::{{message}}"}}'
