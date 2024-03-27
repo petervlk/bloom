@@ -1,0 +1,16 @@
+name: Push
+
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install clj-kondo
+      uses: DeLaGuardo/setup-clj-kondo@master
+      with:
+        version: '2024.03.13'
+
+    - uses: actions/checkout@v2
+
+    - name: Lint
+      run: clj-kondo --lint src test --config '{:output {:pattern "::{{level}} file={{filename}},line={{row}},col={{col}}::{{message}}"}}'
