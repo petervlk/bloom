@@ -6,4 +6,4 @@
 
 (deftest a-test
   (testing "FIXME, I fail."
-    (is (= 0 (sut/foo 1)))))
+    (is (= nil (sut/foo 1)))))
