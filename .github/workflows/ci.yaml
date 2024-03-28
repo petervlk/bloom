@@ -23,7 +23,7 @@ jobs:
     - name: Install clj-style
       uses: DeLaGuardo/setup-clojure@12.5
       with:
-        cljstyle: 0.15.0
+        cljstyle: 0.16.626
 
     - name: Fetch code
       uses: actions/checkout@v4
