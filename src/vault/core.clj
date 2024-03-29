@@ -1,4 +1,4 @@
-(ns bloom.bloom)
+(ns vault.core)
 
 (defn foo
   "I don't do a whole lot."
